@@ -1,0 +1,83 @@
+/* Fonts */
+@font-face {
+  font-family: MajorMonoDisplay;
+  src: url(assets/MajorMonoDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: ProximaNova;
+  src: url(assets/proxima_ssv/ProximaNova-Regular.otf);
+}
+@font-face {
+  font-family: ProximaNova;
+  src: url(assets/proxima_ssv/Proxima_Nova_Bold.otf);
+  font-weight: bold;
+}
+
+/*default*/
+* {
+  padding: 0;
+  margin: 0;
+}
+body,nav {
+  background-color: white;
+  color: black;
+}
+
+/*Specific Text*/
+h1 {
+  font-family: MajorMonoDisplay;
+  color: orange;
+}
+h2,h3,h4 {
+  font-family: ProximaNova;
+  font-weight: bold;
+}
+p {
+  font-family: ProximaNova;
+}
+
+/* Links */
+a {
+  color: #FAD322;
+  font-weight: bold;
+  text-decoration: underline dotted;
+}
+a:visited, a:hover {
+  color: #FFA200
+}
+a.simple {
+  color: black;
+}
+a:hover.simple{
+  color: #808080;
+}
+
+/*Special Rules*/
+img.portfolio {
+  height: 256px;
+  width: 256px;
+  object-fit: cover;
+}
+img:hover.portfolio {
+  opacity: .50;
+}
+div.portfolio {
+  max-width: 200px;
+}
+h1.portfolio,h2.portfolio {
+  writing-mode: vertical-rl;
+  max-width: 1vmax;
+  transform: rotate(180deg);
+  transform-origin: center;
+  padding-right:.4vw;
+  padding-top:1vh;
+  padding-bottom:1vh;
+  padding-left:3vw;
+  margin-left:.5vw;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  grid-gap:.4vw;
+}
