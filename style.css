@@ -1,83 +1,121 @@
 /* Fonts */
+
 @font-face {
-  font-family: MajorMonoDisplay;
-  src: url(assets/MajorMonoDisplay-Regular.ttf);
-}
-@font-face {
-  font-family: ProximaNova;
-  src: url(assets/proxima_ssv/ProximaNova-Regular.otf);
+    font-family: Asul;
+    src: url(assets/Asul/Asul-Regular.ttf);
 }
 @font-face {
-  font-family: ProximaNova;
-  src: url(assets/proxima_ssv/Proxima_Nova_Bold.otf);
-  font-weight: bold;
+    font-family: Asul;
+    src: url(assets/Asul/Asul-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: baudot5;
+    src: url(assets/baudot5.ttf);
+}
+@font-face {
+    font-family: Fira_Code;
+    src: url(assets/Fira_Code/static/FiraCode-Regular.ttf);
 }
 
-/*default*/
-* {
-  padding: 0;
-  margin: 0;
-}
-body,nav {
-  background-color: white;
-  color: black;
+
+body {
+    background-color: aliceblue;
 }
 
-/*Specific Text*/
-h1 {
-  font-family: MajorMonoDisplay;
-  color: orange;
-}
-h2,h3,h4 {
-  font-family: ProximaNova;
-  font-weight: bold;
-}
-p {
-  font-family: ProximaNova;
+nav {
+    /* position:fixed; */
+    margin-top: 20vh;
+    font-family: Asul;
+    font-size: 2vh;
+    writing-mode: vertical-rl;
 }
 
-/* Links */
-a {
-  color: #FAD322;
-  font-weight: bold;
-  text-decoration: underline dotted;
-}
-a:visited, a:hover {
-  color: #FFA200
-}
-a.simple {
-  color: black;
-}
-a:hover.simple{
-  color: #808080;
+nav img {
+    height: 1.7vh;
+    object-fit: scale-down;
+    transform: rotate(90deg)
 }
 
-/*Special Rules*/
-img.portfolio {
-  height: 256px;
-  width: 256px;
-  object-fit: cover;
-}
-img:hover.portfolio {
-  opacity: .50;
-}
-div.portfolio {
-  max-width: 200px;
-}
-h1.portfolio,h2.portfolio {
-  writing-mode: vertical-rl;
-  max-width: 1vmax;
-  transform: rotate(180deg);
-  transform-origin: center;
-  padding-right:.4vw;
-  padding-top:1vh;
-  padding-bottom:1vh;
-  padding-left:3vw;
-  margin-left:.5vw;
+nav a {
+    margin-bottom: 2.5vh;
+    color:black;
+    text-decoration: none;
 }
 
-#grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
-  grid-gap:.4vw;
+header a {
+    color:black;
+    text-decoration: none;
+}
+
+nav a:hover, header a:hover {
+    color: #7887AD
+}
+
+.baudot {
+    font-family: baudot5;
+    font-size: 2vw;
+}
+
+main h1 {
+    font-family: Fira_Code;
+    font-size: 4vw;
+}
+
+main h2 {
+    font-family: Fira_Code;
+    font-size: 3vw;
+}
+
+#title {
+    margin-right: 10vw
+}
+
+#title h1,h2,p{
+    text-align: right;
+    margin: .5vh;
+}
+
+#title p{
+    margin-top: 1vh;
+}
+
+header {
+    /* position: fixed; */
+    width: 92vw;
+    margin-top: -64vh;
+    margin-left: 8vw;
+}
+
+header h3 {
+    font-family: Asul;
+    font-size: 2vh;
+}
+
+header img {
+    margin-left: 0vw;
+    object-fit: cover;
+}
+
+.gallery {
+    margin-top: 0vh;
+    margin-left: 8vw;
+    display: grid;
+    grid-template-rows: 28vh 28vh 28vh;
+    gap: 1vh;
+    grid-auto-flow: column;
+}
+
+.gallery img {
+    overflow: hidden;
+    height: 28vh;
+    width: 28vh;
+    object-fit: cover;
+    filter: grayscale(80%);
+    transition: grayscale 2s;
+}
+
+.gallery img:hover {
+    filter: none;
+    transform: scale(1.1);
 }
